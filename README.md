@@ -1,4 +1,6 @@
+# WEB
 
+## El fin de este proyecto es hacer una pequeña web para un área de RR.HH de una empresa donde pueda manejarse los eventos importantes, empledos nuevos, consultas de los empleados y se puedan ver las distintas áreas de la empresa según fueran creadas. 
 
 # Desde la terminal de VSC:
 
@@ -129,4 +131,5 @@ La web consta de 7 formularios que ayudan a su funcionamiento.
 # Contacto:
 
 gonzaloconti@hotmail.com
+
 
