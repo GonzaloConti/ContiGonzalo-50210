@@ -1,0 +1,30 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Estas viendo los detalles del área seleccionada.</p>
+{% endblock %}
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        
+    <p>
+        {{departamento.nombre}}
+    </p>
+    <p>
+        {{departamento.descripcion}}
+    </p>
+
+    <button>
+        <a href="{% url 'LeerDepartamento' %}"> Regresar </a>
+    </button>
+
+    </ol>
+</div>
+
+{% endblock %}
+    

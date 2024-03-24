@@ -1,0 +1,29 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% load static %}
+
+{% block titulo %}
+<p style="color: black;">Iniciar sesión</p>
+
+
+{% endblock %}
+
+{% block pregunta %}
+    
+{% endblock %}
+
+{% block botones %}
+
+{% for empleado in gente %}
+
+<p>Nombre = {{empleado.usuario}}</p>
+<p>Titulo = {{empleado.titulo}}</p>
+<p>Fecha = {{empleado.fecha}}</p>
+<p>Descripcion = {{empleado.descripcion}}</p>
+
+------------------------------------------------------
+
+{% endfor %}
+{% endblock %}
+
+

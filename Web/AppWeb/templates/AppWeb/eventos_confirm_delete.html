@@ -1,0 +1,25 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Eliminando el evento.</p>
+{% endblock %}
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        
+        <form action="" method="POST"> {% csrf_token %}
+
+            <p>¿Estás seguro que quieres eliminar este evento?</p>
+            <input type="submit" value="Eliminar">
+
+    
+        </form>
+    </ol>
+</div>
+
+{% endblock %}

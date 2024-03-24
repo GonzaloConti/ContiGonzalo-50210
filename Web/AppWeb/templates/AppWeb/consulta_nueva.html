@@ -1,0 +1,23 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Aquí puede realizar una nueva consulta</p>
+{% endblock %}
+
+{% block parrafo %}
+
+<div style="display: flex; justify-content: center">
+    <form action="" method="post"> {% csrf_token %}
+    
+        {{formu}}
+    <br>
+        <input type="submit" value="Guardar">
+        <button>
+            <a href="{% url 'verConsultas' %}">Ver Consultas</a>
+        </button>
+    
+    </form>
+</div>
+<br>
+
+{% endblock %}

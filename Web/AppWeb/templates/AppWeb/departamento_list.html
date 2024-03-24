@@ -1,0 +1,47 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Aquí puede ver, crear, editar o borrar áreas de la empresa.</p>
+{% endblock %}
+
+{% block parrafo %}
+    
+    
+
+    <div style="display: flex; justify-content: center">
+       </div>
+       <br>
+       <div style="display: flex; justify-content: center">
+           
+           <ol>
+               {% for departamento in object_list %}
+       
+           <p>nombre : {{departamento.nombre}}</p>
+               
+            <button>
+               <a href="{% url 'DetalleDepartamento' departamento.id %}"> Ver  </a>
+            </button>
+            <button>
+               <a href="{% url 'ActualizarDepartamento' departamento.id %}"> Editar  </a>
+            </button>
+            <button>
+               <a href="{% url 'BorrarDepartamento' departamento.id %}"> Borrar  </a>
+            </button>
+       
+               
+           <br>
+           <br>
+               --------------------------------------------------------------------
+       
+           {% endfor %}
+       
+           <br>
+           <br>
+       
+           <button><a href="{% url 'CrearDepartamento' %}">Crear Departamento</a></button>
+               </ol>
+       </div>
+       
+
+{% endblock %}
+

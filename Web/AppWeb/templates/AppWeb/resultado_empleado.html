@@ -1,0 +1,30 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+{% block titulo %}
+<p style="color: black;">Aquí puede dar de alta un empleado de la empresa</p>
+{% endblock %}
+
+
+{% block botones %}
+<div style="display: flex; justify-content: center">
+ <h4>Los empleados con ese nombre son:</h4>
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        {% for empleado in resultados %}
+        <li>Nombre y apellido: {{ empleado.nombre }} {{ empleado.apellido }} - Puesto: {{ empleado.puesto }} </li>
+        <form action="{% url 'EliminarEmpleado' empleado.nombre %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="empleado_id" value="{{ empleado.id }}">
+            <button type="submit">Eliminar</button>
+        </form>
+        {% endfor %}   
+        </ol>
+</div>
+
+{% endblock %}
+
+<a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'editarEmpleado' empleado.nombre %}">Editar Información de un empleado</a>

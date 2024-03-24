@@ -1,0 +1,43 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% load static %}
+
+{% block titulo %}
+
+<p style="color: black;">Acá podes agregar tu imagen de perfil</p>
+
+{% endblock %}
+
+{% block pregunta %}
+    
+{% endblock %}
+
+{% block parrafo %}
+
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+
+    <form action="" method="POST" enctype="multipart/form-data"> {% csrf_token %}
+
+        {{formulario.as_p}}
+
+        <button type="submit">Agregar avatar</button>
+    </form>
+    
+    
+</div>
+
+<div class="container px-5"><p class="m-0 text-center text-black">Copyright &copy; Gonzalo Conti 2024 <a href="#!"> Acerca de mi </a></p></div>
+{% endblock %}
+
+{% block copy %}
+
+    
+
+{% endblock %}
+
+
+
+

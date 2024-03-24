@@ -1,0 +1,34 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+
+{% block titulo %}
+<p style="color: black;">Cambiar Contraseña</p>
+
+{% endblock %}
+
+{% block botones %}
+
+    <style>
+    /* Estilo para los nombres de los formularios */
+        form label {
+            color: rgb(0, 0, 0); /* Cambia el color */
+        }
+    </style>
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        {{form.as_p}}
+
+        <button type="submit">Cambiar contraseña</button>
+    </form>
+
+{% endblock %}
+
+
+{% block copy %}
+
+    <div class="container px-5"><p class="m-0 text-center text-black">Copyright &copy; Gonzalo Conti 2024</p></div>
+
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+{% block titulo %}
+<p style="color: black;">Aquí puede dar de alta un empleado de la empresa</p>
+
+{% endblock %}
+
+{% block parrafo %}
+
+<div style="display: flex; justify-content: center">
+    <form action="" method="post"> {% csrf_token %}
+    
+        {{formu}}
+    
+        <input type="submit" value="Guardar">
+    
+    </form>
+</div>
+
+{% endblock %}

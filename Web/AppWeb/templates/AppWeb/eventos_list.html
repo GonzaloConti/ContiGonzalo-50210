@@ -1,0 +1,47 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Aquí puede ver, crear, editar o borrar eventos de la empresa.</p>
+{% endblock %}
+
+{% block parrafo %}
+    
+    
+
+    <div style="display: flex; justify-content: center">
+       </div>
+       <br>
+       <div style="display: flex; justify-content: center">
+           
+           <ol>
+               {% for evento in object_list %}
+       
+           <p>nombre : {{evento.nombre}}</p>
+               
+            <button>
+               <a href="{% url 'DetalleEventos' evento.id %}"> Ver  </a>
+            </button>
+            <button>
+               <a href="{% url 'ActualizarEventos' evento.id %}"> Editar  </a>
+            </button>
+            <button>
+               <a href="{% url 'BorrarEventos' evento.id %}"> Borrar  </a>
+            </button>
+       
+               
+           <br>
+           <br>
+               --------------------------------------------------------------------
+       
+           {% endfor %}
+       
+           <br>
+           <br>
+            <button><a href="{% url 'CrearEventos' %}">Nuevo evento</a></button>
+           
+               </ol>
+       </div>
+
+
+{% endblock %}
+

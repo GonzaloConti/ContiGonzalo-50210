@@ -1,0 +1,31 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% load static %}
+
+{% block titulo %}
+
+<p style="color: black;">Registrar usuario</p>
+
+{% endblock %}
+
+
+{% block botones %}
+
+    <style>
+    /* Estilo para los nombres de los formularios */
+        form label {
+            color: rgb(0, 0, 0); /* Cambia el color aquí según tus preferencias */
+        }
+    </style>
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        {{formu.as_p}}
+
+        <button type="submit">Registrarse</button>
+    </form>
+
+{% endblock %}
+
+
+

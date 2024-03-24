@@ -1,0 +1,48 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% load static %}
+
+{% block titulo %}
+
+<p style="color: black;">{{Bienvenida}}</p>
+
+{% endblock %}
+
+{% block pregunta %}
+
+<p style="color: black;">{{mensaje}}</p>
+
+{% endblock %}
+
+{% block botones %}
+
+{% if request.user.is_authenticated %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+
+    <ol>
+        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'empleado_nuevo' %}">Nuevo Empleado</a>
+            <a class="btn btn-primary btn-lg px-4 me-sm-3" href="{% url 'buscar_empleado' %}">Buscar empleado existente</a>            
+        </div>
+
+
+    </ol>
+</div>
+        
+{% endif %}
+
+{% endblock %}
+
+
+
+{% block copy %}
+    
+    <div class="container px-5"><p class="m-0 text-center text-black">Copyright &copy; Gonzalo Conti 2024 <a href="#!"> Acerca de mi </a></p></div>
+    
+{% endblock %}
+
+
+

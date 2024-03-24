@@ -1,0 +1,18 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+{% block titulo %}
+<p style="color: black;"><h2>Eliminar Empleado</h2></p>
+
+{% endblock %}
+
+{% block parrafo %}
+
+<p>¿Estás seguro de que deseas eliminar este empleado?</p>
+<form action="{% url 'eliminar_empleado' empleado.nombre %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Eliminar</button>
+</form>
+<a href="{% url 'empleados' %}">Cancelar</a>
+
+{% endblock %}

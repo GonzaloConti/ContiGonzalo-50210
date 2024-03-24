@@ -1,0 +1,23 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Edita el área seleccionada.</p>
+{% endblock %}
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        
+        <form action="" method="POST"> {% csrf_token %}
+                {{form.as_p}}
+            <input type="submit" value="Subir">
+    
+        </form>
+    </ol>
+</div>
+
+{% endblock %}

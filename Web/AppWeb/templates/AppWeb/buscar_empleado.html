@@ -1,0 +1,19 @@
+{% extends 'AppWeb/padre.html'%}
+
+
+{% block titulo %}
+    <p style="color: black;">Aquí puede buscar un empleado por su nombre</p>
+{% endblock %}
+
+{% block botones %}
+
+<div style="display: flex; justify-content: center">
+    <form action="/Web/resultados/" method="get">
+
+        nombre del empleado: <input type="text" name="empleado"><input type="submit" value="Buscar">
+    </form>
+    
+</div>
+
+{% endblock %}
+

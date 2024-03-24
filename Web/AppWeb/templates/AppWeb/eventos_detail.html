@@ -1,0 +1,34 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Detalles del evento.</p>
+{% endblock %}
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        
+    <p>
+        {{eventos.nombre}}
+    </p>
+    <p>
+        {{eventos.descripcion}}
+    </p>
+
+    <p>
+        {{eventos.fecha}}
+    </p>
+
+    <button>
+        <a href="{% url 'LeerEventos' %}"> Regresar </a>
+    </button>
+
+    </ol>
+</div>
+
+{% endblock %}
+    

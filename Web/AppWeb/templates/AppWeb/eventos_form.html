@@ -1,0 +1,25 @@
+{% extends 'AppWeb/padre.html'%}
+
+{% block titulo %}
+<p style="color: black;">Crear o editar un evento.</p>
+{% endblock %}
+
+{% block parrafo %}
+<div style="display: flex; justify-content: center">
+</div>
+<br>
+<div style="display: flex; justify-content: center">
+    
+    <ol>
+        
+        <form action="" method="POST"> {% csrf_token %}
+                {{form.as_p}}
+                <h6>*Recuerde ingresar la fecha como aaaa-mm-dd*</h6>
+                <br>
+            <input type="submit" value="Enviar">
+    
+        </form>
+    </ol>
+</div>
+
+{% endblock %}
